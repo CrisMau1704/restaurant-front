@@ -19,7 +19,7 @@
                 <h2>Platos en {{ categoriaSeleccionada?.nombre || '' }}</h2>
                 <div class="platos-grid">
                     <div v-for="plato in platos" :key="plato.id" class="plato-card" @click="addCarrito(plato)">
-                        <img :src="`http://127.0.0.1:8000/storage/${plato.imagen}`" :alt="plato.nombre" />
+                        <img :src="`${import.meta.env.VITE_API_URL}/storage/${plato.imagen}`" :alt="plato.nombre" />
                         <h4>{{ plato.nombre }}</h4>
                         <p>{{ formatCurrency(plato.precio_venta) }}</p>
                     </div>
@@ -31,7 +31,7 @@
                 <h3>Carrito ({{ carrito.length }} platos)</h3>
                 <div class="carrito-items">
                     <div v-for="item in carrito" :key="item.plato_id" class="carrito-item">
-                        <img class="carrito-img" :src="`http://127.0.0.1:8000/storage/${getImagenPlato(item.plato_id)}`"
+                        <img class="carrito-img" :src="`${import.meta.env.VITE_API_URL}/storage/${getImagenPlato(item.plato_id)}`"
                             alt="Imagen Plato" />
                         <div class="carrito-info">
                             <h4>{{ item.nombre }}</h4>

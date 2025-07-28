@@ -45,7 +45,7 @@
         <template #body="slotProps">
   {{ console.log(slotProps.data.imagen) }}
   <img 
-    :src="`http://127.0.0.1:8000/storage/${slotProps.data.imagen}`" 
+    :src="`${import.meta.env.VITE_API_URL}/storage/${slotProps.data.imagen}`" 
     alt="Imagen"
     style="width: 50px; height: 50px;" 
   />
@@ -436,7 +436,7 @@ const exportPDF = () => {
 const abrirPDF = (data) => {
   console.log('Data del producto:', data); // Verifica qué contiene 'data'
   if (data.imagen) {  // Cambia .pdf por .imagen
-    const urlPDF = `http://127.0.0.1:8000/storage/${data.imagen}`;
+    const urlPDF = `${import.meta.env.VITE_API_URL}/storage/${data.imagen}`;
     console.log('URL del PDF:', urlPDF);  // Verifica si la URL es correcta
     pdfURL.value = urlPDF;
     mostrarDialogPDF.value = true;

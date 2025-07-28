@@ -247,7 +247,7 @@ const validarCompra = computed(() => {
 
 // Métodos
 const getImageUrl = (imagePath) => {
-    return imagePath ? `http://127.0.0.1:8000/storage/${imagePath}` : 'https://via.placeholder.com/50';
+    return imagePath ? `/storage/${imagePath}` : 'https://via.placeholder.com/50';
 };
 
 const formatCurrency = (value) => {

@@ -31,7 +31,7 @@
                         <Column header="Imagen" style="width: 120px">
                             <template #body="slotProps">
                                 <div class="dish-image-container" @click="addCarrito(slotProps.data)">
-                                    <img :src="`http://127.0.0.1:8000/storage/${slotProps.data.imagen}`"
+                                    <img :src="`${import.meta.env.VITE_API_URL}/storage/${slotProps.data.imagen}`"
                                         :alt="slotProps.data.nombre" class="dish-image" />
                                     <div class="add-to-cart-hover">
                                         <i class="pi pi-plus-circle"></i> Añadir
