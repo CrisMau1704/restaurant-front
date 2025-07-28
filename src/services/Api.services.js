@@ -1,6 +1,9 @@
 import axios from "axios";
 
 const urlBaseMeta = import.meta.env.VITE_API_URL + "/api";
+console.log("Base URL API:", urlBaseMeta); // Para verificar la URL en consola
+
+
 
 export const Api = () => {
     let token = localStorage.getItem("access_token");
