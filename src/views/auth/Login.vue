@@ -1,6 +1,6 @@
 <template>
   <div class="surface-ground flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden"
-      style="background: url('/public/demo/images/fondo4.jpeg') no-repeat center center fixed; background-size: cover;">
+      style="background: url('https://zingy-brioche-36c7f0.netlify.app/demo/images/fondo4.jpeg') no-repeat center center fixed; background-size: cover;">
       <div class="flex flex-column align-items-center justify-content-center">
           <div style="border-radius: 56px; padding: 0.3rem; background: linear-gradient(180deg, var(--primary-color) 10%, rgba(33, 150, 243, 0) 30%)">
               <div class="w-full surface-card py-8 px-5 sm:px-8" style="border-radius: 53px">
