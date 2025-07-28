@@ -1,19 +1,16 @@
 import axios from "axios";
 
-const urlBaseMeta = "http://127.0.0.1:8000/api";
+const urlBaseMeta = import.meta.env.VITE_API_URL + "/api";
 
 export const Api = () => {
     let token = localStorage.getItem("access_token");
 
     const api = axios.create({
         baseURL: urlBaseMeta,
-        headers:{
+        headers: {
             'Accept': 'application/json',
             'Authorization': `Bearer ${token}`
-
         }
-
-
     });
 
     api.interceptors.response.use(
@@ -35,5 +32,4 @@ export const Api = () => {
     );
     
     return api;
-   
 }
