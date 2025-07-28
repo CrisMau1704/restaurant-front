@@ -17,7 +17,7 @@ export const Api = () => {
     });
 
     api.interceptors.response.use(
-        (response) => response, // Retornar respuesta directamente
+        (response) => response, // Retordasdanar respuesta directamente
         (error) => {
             if (error.response) {
                 if (error.response.status === 401) {
