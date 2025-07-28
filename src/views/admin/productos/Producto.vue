@@ -45,7 +45,7 @@
         <template #body="slotProps">
   {{ console.log(slotProps.data.imagen) }}
   <img 
-    :src="`${import.meta.env.VITE_API_URL}/storage/${slotProps.data.imagen}`" 
+    :src="`${API_URL}/storage/${slotProps.data.imagen}`" 
     alt="Imagen"
     style="width: 50px; height: 50px;" 
   />
@@ -154,6 +154,7 @@
 </template>
 
 <script setup>
+const API_URL = import.meta.env.VITE_API_URL;
 import productoService from '../../../services/producto.service';
 import categoriaService from '../../../services/categoria.service';
 import Toast from 'primevue/toast';
@@ -436,7 +437,7 @@ const exportPDF = () => {
 const abrirPDF = (data) => {
   console.log('Data del producto:', data); // Verifica qué contiene 'data'
   if (data.imagen) {  // Cambia .pdf por .imagen
-    const urlPDF = `${import.meta.env.VITE_API_URL}/storage/${data.imagen}`;
+    const urlPDF = `${API_URL}/storage/${data.imagen}`;
     console.log('URL del PDF:', urlPDF);  // Verifica si la URL es correcta
     pdfURL.value = urlPDF;
     mostrarDialogPDF.value = true;
