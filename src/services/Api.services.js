@@ -1,7 +1,6 @@
 import axios from "axios";
 
-console.log('Base URL usada para API:', urlBaseMeta);
-
+console.log('VITE_API_URL desde env:', import.meta.env.VITE_API_URL);
 const urlBaseMeta = import.meta.env.VITE_API_URL + "/api";// Para verificar la URL en consola
 
 
