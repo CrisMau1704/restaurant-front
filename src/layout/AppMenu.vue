@@ -19,12 +19,27 @@ onMounted(() => {
                 items: [{ label: 'Administrador', icon: 'pi pi-fw pi-home', to: '/admin/dashboard' }]
             },
             {
-                label: 'Gestion Platos y productos',
+                label: 'Menú',
                 items: [
                     { label: 'Categorias', icon: 'pi pi-fw pi-check-square', to: '/admin/categoria' },
                     { label: 'Productos', icon: 'pi pi-fw pi-id-card', to: '/admin/producto' },
-                    { label: 'Proveedores', icon: 'pi pi-fw pi-user-plus', to: '/admin/proveedor' },
-                    { label: 'Platos', icon: 'pi pi-fw pi-list', to: '/admin/plato' }
+                    { label: 'Platos', icon: 'pi pi-fw pi-list', to: '/admin/plato' },
+                    { label: 'Proveedores', icon: 'pi pi-fw pi-user-plus', to: '/admin/proveedor' }
+
+                ]
+            },
+            {
+                label: 'Ventas',
+                items: [
+                    { label: 'Lista ventas', icon: 'pi pi-fw pi-list', to: '/admin/pedido' },
+                    { label: 'Nueva Venta', icon: 'pi pi-fw pi-plus', to: '/admin/pedido/nuevo' }
+                ]
+            },
+            {
+                label: 'Compras',
+                items: [
+                    { label: 'Lista de compras', icon: 'pi pi-fw pi-list', to: '/admin/compras' },
+                    { label: 'Nueva Compra', icon: 'pi pi-fw pi-plus', to: '/admin/compras/nuevo' }
                 ]
             },
             {
@@ -34,20 +49,8 @@ onMounted(() => {
                     { label: 'Clientes', icon: 'pi pi-fw pi-user-plus', to: '/admin/cliente', target: '_blank' }
                 ]
             },
-            {
-                label: 'Gestion Ventas',
-                items: [
-                    { label: 'Lista ventas', icon: 'pi pi-fw pi-list', to: '/admin/pedido' },
-                    { label: 'Nueva Venta', icon: 'pi pi-fw pi-plus', to: '/admin/pedido/nuevo' }
-                ]
-            },
-            {
-                label: 'Gestion Compras',
-                items: [
-                    { label: 'Lista de compras', icon: 'pi pi-fw pi-list', to: '/admin/compras' },
-                    { label: 'Nueva Compra', icon: 'pi pi-fw pi-plus', to: '/admin/compras/nuevo' }
-                ]
-            },
+
+
             {
                 label: 'Configuracion',
                 icon: 'pi pi-fw pi-briefcase',
@@ -55,7 +58,14 @@ onMounted(() => {
                 items: [
                     { label: 'Roles y Permisos', icon: 'pi pi-fw pi-user', to: '/admin/roles' }
                 ]
-            }
+            },
+            {
+                label: 'Reportes',
+                icon: 'pi pi-fw pi-chart-bar',
+                items: [
+                    { label: 'Ventas por día, semana, mes', icon: 'pi pi-fw pi-calendar', to: '/admin/reportes/periodo' },
+                ]
+            },
         ];
     } else if (rol === 'vendedor') {
         model.value = [
@@ -124,6 +134,3 @@ onMounted(() => {
   }
 }
 </style>-->
-
-
-

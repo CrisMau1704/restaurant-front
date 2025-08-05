@@ -14,9 +14,10 @@ import ListaPedido from '../views/admin/pedido/ListaPedido.vue'
 import Proveedor from '../views/admin/productos/Proveedor.vue'
 import NuevaCompra from '../views/admin/compras/NuevaCompra.vue'
 import Roles from '../views/admin/Roles.vue'
+
 import Dashboard from '../views/admin/Dashboard.vue'
 import Plato from '../views/admin/productos/Plato.vue'
-
+import Periodo from '../views/admin/reportes/Periodo.vue'
 
 
 
@@ -118,6 +119,11 @@ const router = createRouter({
           component: Dashboard,  // Carga el componente Roles.vue
         },
        
+         {
+          path: '/admin/reportes/periodo',  // Asegúrate de que esta ruta sea la misma que usas en el menú
+          name: 'Periodo',
+          component: Periodo,  // Carga el componente Roles.vue
+        },
 
 
 
